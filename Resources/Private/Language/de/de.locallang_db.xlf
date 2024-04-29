@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:18Z" product-name="appointment" target-language="de">
+        <header>
+            <authorName>bookingtime gmbh</authorName>
+            <authorEmail>cms-ext@bookingtime.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit xml:space="preserve" approved="yes" id="bookingtimepageurl">
+                <target state="final">Bookingtime Page URLS</target>
+            </trans-unit>
+            <trans-unit xml:space="preserve" approved="yes" id="bookingtimepageurl.title">
+                <target state="final">Titel</target>
+            </trans-unit>
+            <trans-unit xml:space="preserve" approved="yes" id="bookingtimepageurl.url">
+                <target state="final">URL</target>
+            </trans-unit>
+            <trans-unit xml:space="preserve" approved="yes" id="actions">
+                <target state="final">Aktionen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

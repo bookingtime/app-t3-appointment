@@ -1,0 +1,2 @@
+# Pattern: templates."composer-name"."something-unique" = "overriding-extension-composer-name":"entry-path"
+templates.appointment.100 = Bookingtime/Appointment:Resources/Private/Templates/

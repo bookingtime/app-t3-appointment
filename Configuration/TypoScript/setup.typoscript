@@ -1,0 +1,42 @@
+######################
+# Frontend Plugin ####
+######################
+plugin.tx_appointment {
+	view {
+		templateRootPaths {
+			0 = EXT:bt_appointment/Resources/Private/Templates/
+			1 = {$plugin.tx_appointment.view.templateRootPath}
+		}
+		partialRootPaths {
+			0 = EXT:bt_appointment/Resources/Private/Partials/
+			1 = {$plugin.tx_appointment.view.partialRootPath}
+		}
+		layoutRootPaths {
+			0 = EXT:bt_appointment/Resources/Private/Layouts/
+			1 = {$plugin.tx_appointment.view.layoutRootPath}
+		}
+	}
+
+	persistence {
+		storagePid = {$plugin.tx_appointment.settings.pid}
+		recursive = 99
+	}
+
+	settings {
+		pid = {$plugin.tx_appointment.settings.pid}
+	}
+}
+
+
+####################
+# Backend Modul ####
+####################
+module.tx_appointment {
+    persistence {
+        storagePid = {$plugin.tx_appointment.settings.pid}
+        recursive = 99
+    }
+	settings {
+		pid = {$plugin.tx_appointment.settings.pid}
+	}
+}

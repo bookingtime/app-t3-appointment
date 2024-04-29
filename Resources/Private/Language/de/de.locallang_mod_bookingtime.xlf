@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T11:47:18Z" product-name="appointment" target-language="de">
+        <header>
+            <authorName>bookingtime gmbh</authorName>
+            <authorEmail>cms-ext@bookingtime.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit xml:space="preserve" approved="yes" id="mlang_labels_tablabel" resname="mlang_labels_tablabel">
+               <target state="final">Bookingtime</target>
+            </trans-unit>
+            <trans-unit xml:space="preserve" approved="yes" id="mlang_labels_tabdescr" resname="mlang_labels_tabdescr">
+               <target state="final">Dieses Module verwaltet Ihre Appointment.</target>
+            </trans-unit>
+            <trans-unit xml:space="preserve" approved="yes" id="mlang_tabs_tab" resname="mlang_tabs_tab">
+               <target state="final">Bookingtime</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

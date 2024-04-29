@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2014-06-02T11:47:18Z" product-name="appointment">
+        <header>
+            <authorName>bookingtime gmbh</authorName>
+            <authorEmail>cms-ext@bookingtime.com</authorEmail>
+        </header>
+        <body>
+			<trans-unit id="header.link.external.2">
+				<source>header.link.external.2</source>
+				<target>Zu bookingtime</target>
+			</trans-unit>
+
+			<trans-unit id="required.info">
+				<source>required.info</source>
+				<target>Alle Felder sind Pflichtfelder.</target>
+			</trans-unit>
+			<trans-unit id="step1.h4.1">
+				<source>step1.h4.1</source>
+				<target>Neues bookingtime Konto erstellen</target>
+			</trans-unit>
+			<trans-unit id="step1.h4.2">
+				<source>step1.h4.2</source>
+				<target>Sie haben bereits ein Konto?</target>
+			</trans-unit>
+			<trans-unit id="step1.p.1">
+				<source>step1.p.1</source>
+				<target>Integrieren Sie bookingtime in Ihre WordPress-Installation. Das geht ganz schnell und einfach.</target>
+			</trans-unit>
+			<trans-unit id="step1.link.action.step2">
+				<source>step1.link.action.step2</source>
+				<target>Neuen Account erstellen</target>
+			</trans-unit>
+			<trans-unit id="step1.link.action.list">
+				<source>step1.link.action.add</source>
+				<target>Buchungsseiten verbinden</target>
+			</trans-unit>
+
+
+			<trans-unit id="step2.h4.1">
+				<source>step2.h4.1</source>
+				<target>Erstellen Sie Ihr bookingtime Konto</target>
+			</trans-unit>
+			<trans-unit id="step2.form.email.label">
+				<source>step2.form.email.label</source>
+				<target>E-Mail Adresse</target>
+			</trans-unit>
+			<trans-unit id="step2.form.email.placeholder">
+				<source>step2.form.email.placeholder</source>
+				<target>z. B. beispiel@musterfirma.de</target>
+			</trans-unit>
+			<trans-unit id="step2.form.firstname.label">
+				<source>step2.form.firstname.label</source>
+				<target>Vorname</target>
+			</trans-unit>
+			<trans-unit id="step2.form.firstname.placeholder">
+				<source>step2.form.firstname.placeholder</source>
+				<target>Max</target>
+			</trans-unit>
+			<trans-unit id="step2.form.lastname.label">
+				<source>step2.form.lastname.label</source>
+				<target>Nachname</target>
+			</trans-unit>
+			<trans-unit id="step2.form.lastname.placeholder">
+				<source>step2.form.lastname.placeholder</source>
+				<target>Mustermann</target>
+			</trans-unit>
+			<trans-unit id="step2.form.company.label">
+				<source>step2.form.company.label</source>
+				<target>Unternehmen</target>
+			</trans-unit>
+			<trans-unit id="step2.form.company.placeholder">
+				<source>step2.form.company.placeholder</source>
+				<target>Musterfirma GmbH</target>
+			</trans-unit>
+			<trans-unit id="step2.form.checkbox.terms">
+				<source>step2.form.checkbox.terms</source>
+				<target>Ich akzeptiere die &lt;a target="_blank" href="%s"&gt;Nutzungsbedingungen&lt;/a&gt;.</target>
+			</trans-unit>
+			<trans-unit id="step2.form.checkbox.dsgvo">
+				<source>step2.form.checkbox.dsgvo</source>
+				<target>Hiermit beauftrage ich den &lt;a target="_blank" href="%s"&gt;Vertrag zur Datenverarbeitung&lt;/a&gt;, damit ich meine Pflicht gem. DSGVO erfülle.</target>
+			</trans-unit>
+			<trans-unit id="step2.form.button.submit">
+				<source>step2.form.button.submit</source>
+				<target>Konto erstellen</target>
+			</trans-unit>
+			<trans-unit id="step2.link.action.step1">
+				<source>step2.link.action.step1</source>
+				<target>Zurück</target>
+			</trans-unit>
+			<trans-unit id="step2.form.address.name.label">
+				<source>step2.form.address.name.label</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="step2.form.address.name.placeholder">
+				<source>step2.form.address.name.placeholder</source>
+				<target>Max Mustermann</target>
+			</trans-unit>
+			<trans-unit id="step2.form.address.street.label">
+				<source>step2.form.address.street.label</source>
+				<target>Straße und Hausnummer</target>
+			</trans-unit>
+			<trans-unit id="step2.form.address.street.placeholder">
+				<source>step2.form.address.street.placeholder</source>
+				<target>Musterstasse 1</target>
+			</trans-unit>
+			<trans-unit id="step2.form.address.zip.label">
+				<source>step2.form.address.zip.label</source>
+				<target>Postleitzahl</target>
+			</trans-unit>
+			<trans-unit id="step2.form.address.zip.placeholder">
+				<source>step2.form.address.zip.placeholder</source>
+				<target>12345</target>
+			</trans-unit>
+			<trans-unit id="step2.form.address.city.label">
+				<source>step2.form.address.city.label</source>
+				<target>Stadt/Ort</target>
+			</trans-unit>
+			<trans-unit id="step2.form.address.city.placeholder">
+				<source>step2.form.address.city.placeholder</source>
+				<target>Musterstadt</target>
+			</trans-unit>
+			<trans-unit id="step2.form.address.country.label">
+				<source>step2.form.address.country.label</source>
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="step2.form.sector.prependOptionLabel">
+				<source>step2.form.sector.prependOptionLabel</source>
+				<target>Bitte wählen</target>
+			</trans-unit>
+
+			<trans-unit id="edit.header">
+				<source>edit.header</source>
+				<target>Details Ihrer Buchungsseite</target>
+			</trans-unit>
+			<trans-unit id="add.header">
+				<source>add.header</source>
+				<target>Bookingpage hinzufügen</target>
+			</trans-unit>
+			<trans-unit id="add_edit.form.url.placeholder">
+				<source>add_edit.form.url.placeholder</source>
+				<target>https://module.bookingtime.com/booking/...</target>
+			</trans-unit>
+			<trans-unit id="add_edit.form.url.label.bottom">
+				<source>add_edit.form.url.label.bottom</source>
+				<target>Sie finden die URL in den Einstellungen des Buchungsmoduls in Ihrem bookingtime Store.</target>
+			</trans-unit>
+			<trans-unit id="add_edit.form.title.placeholder">
+				<source>add_edit.form.title.placeholder</source>
+				<target>Ihre bookingtime Buchnugsseiten-Bezeichnung</target>
+			</trans-unit>
+			<trans-unit id="add_edit.form.title.label">
+				<source>add_edit.form.title.label</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="add_edit.form.title.label.bottom">
+				<source>add_edit.form.title.label.bottom</source>
+				<target>Der Name ist für Ihre Kunden nicht sichtbar.</target>
+			</trans-unit>
+			<trans-unit id="add_edit.form.url.label">
+				<source>add_edit.form.url.label</source>
+				<target>URL der Buchungsseite</target>
+			</trans-unit>
+			<trans-unit id="add_edit.h5.1">
+				<source>add_edit.h5.1</source>
+				<target>Sie haben noch keine Buchungsseiten-URL gespeichert.</target>
+			</trans-unit>
+			<trans-unit id="add_edit.form.button.submit">
+				<source>add_edit.form.button.submit</source>
+				<target>Bestätigen</target>
+			</trans-unit>
+			<trans-unit id="add_edit.form.button.cancel">
+				<source>add_edit.form.button.cancel</source>
+				<target>Abbrechen</target>
+			</trans-unit>
+
+			<trans-unit id="documentation.h5.1">
+				<source>documentation.h5.1</source>
+				<target>So finden Sie die URL Ihrer Buchungsseite</target>
+			</trans-unit>
+			<trans-unit id="documentation.step.1">
+				<source>documentation.step.1</source>
+				<target>Schritt 1:</target>
+			</trans-unit>
+			<trans-unit id="documentation.step.1.text">
+				<source>documentation.step.1.text</source>
+				<target>Loggen Sie sich in Ihr bookingtime-Konto ein und navigieren Sie zu "Store" und dann zu "Buchungsmodul".</target>
+			</trans-unit>
+			<trans-unit id="documentation.step.2">
+				<source>documentation.step.2</source>
+				<target>Schritt 2:</target>
+			</trans-unit>
+			<trans-unit id="documentation.step.2.text">
+				<source>documentation.step.2.text</source>
+				<target>Wählen Sie oben rechts "Einstellungen". In der nun geöffneten Seitenleiste finden Sie "Link zum Modul". Dies ist die URL Ihrer Buchungsseite.</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.delete.title">
+				<source>flashmessage.delete.title</source>
+				<target>LÖSCHEN der Buchungsseite-URL: &lt;u&gt;%s&lt;/u&gt;</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.delete.body">
+				<source>flashmessage.delete.body</source>
+				<target>Sie haben erfolgreich gelöscht: &lt;u&gt;%s&lt;/u&gt;</target>
+			</trans-unit>
+
+			<trans-unit id="flashmessage.delete.title.error">
+				<source>flashmessage.delete.title.error</source>
+				<target>LÖSCHEN der Buchungsseite-URL fehlgeschlagen!</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.delete.body.error">
+				<source>flashmessage.delete.body.error</source>
+				<target>Sie haben Ihre Buchungsseiten-URL nicht erfolgreich gelöscht.</target>
+			</trans-unit>
+
+			<trans-unit id="flashmessage.add_edit.body">
+				<source>flashmessage.add_edit.body</source>
+				<target>SPEICHERN der Buchungsseite-URL: &lt;u&gt;%s&lt;/u&gt;</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.add_edit.title">
+				<source>flashmessage.add_edit.title</source>
+				<target>Sie haben erfolgreich gespeichert: &lt;u&gt;%s&lt;/u&gt;</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.step1.body">
+				<source>flashmessage.step1.body</source>
+				<target>Sie haben diese E-Mail verwendet: &lt;u&gt;%s&lt;/u&gt;</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.step1.title">
+				<source>flashmessage.step1.title</source>
+				<target>Schritt 1 erfolgreich abgeschlossen</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.validateUrl.body">
+				<source>flashmessage.validateUrl.body</source>
+				<target>Die URL ist nicht valide.</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.validateUrl.title">
+				<source>flashmessage.validateUrl.title</source>
+				<target>URL Validierung fehlgeschlagen!</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.validateTitle.body">
+				<source>flashmessage.validateTitle.body</source>
+				<target>The name can`t be empty.</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.validateTitle.title">
+				<source>flashmessage.validateTitle.title</source>
+				<target>Name validation failed!</target>
+			</trans-unit>
+
+			<trans-unit id="step3.h3.1">
+				<source>step3.h3.1</source>
+				<target>bookingtime erfolgreich angelegt!</target>
+			</trans-unit>
+			<trans-unit id="step3.h5.1">
+				<source>step3.h5.1</source>
+				<target>Vorschau Ihrer Buchungsseite</target>
+			</trans-unit>
+			<trans-unit id="step3.h5.2">
+				<source>step3.h5.2</source>
+				<target>Aktivieren Sie Ihre Terminbuchung</target>
+			</trans-unit>
+			<trans-unit id="step3.p.1">
+				<source>step3.p.1</source>
+				<target>Nachdem Sie Ihre Terminbuchung erfolgreich aktiviert haben, finden Sie hier Ihre nagelneue &lt;a href="%s"&gt;Buchungsseite&lt;/a&gt;.</target>
+			</trans-unit>
+			<trans-unit id="step3.p.2">
+				<source>step3.p.2</source>
+				<target>Wir haben Ihnen eine &lt;b&gt;Bestätigungs-E-Mail&lt;/b&gt; an &lt;u&gt;%s&lt;/u&gt; geschickt. Bitte prüfen Sie Ihren Posteingang, um Ihre Terminbuchung zu aktivieren.</target>
+			</trans-unit>
+			<trans-unit id="step3.p.3">
+				<source>step3.p.3</source>
+				<target>Sie können Ihre Bestätigungs-E-Mail nicht finden? Vielleicht liegt sie im Spam-Ordner.</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.body">
+				<source>flashmessage.step2.body</source>
+				<target>Ihr bookingtime Konto ist bereit!</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.title">
+				<source>flashmessage.step2.title</source>
+				<target>Schritt 2 erfolgreich abgeschlossen</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.body.error">
+				<source>flashmessage.step2.body.error</source>
+				<target>Ihr bookingtime Konto ist nicht bereit!</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.title.error">
+				<source>flashmessage.step2.title.error</source>
+				<target>Schritt 2 nicht abgeschlossen</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.error.contractAccount.body">
+				<source>flashmessage.step2.error.contractAccount.body</source>
+				<target>Rückmeldung: &lt;u&gt;%s&lt;/u&gt;</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.error.contractAccount.title">
+				<source>flashmessage.step2.error.contractAccount.title</source>
+				<target>Erstellen des Vertragskontos fehlgeschlagen. FehlerCode: &lt;u&gt;%s&lt;/u&gt;</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.error.organization.body">
+				<source>flashmessage.step2.error.organization.body</source>
+				<target>Rückmeldung: &lt;u&gt;%s&lt;/u&gt;</target>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.error.organization.title">
+				<source>flashmessage.step2.error.organization.title</source>
+				<target>Erstellen der Organisation fehlgeschlagen. FehlerCode: &lt;u&gt;%s&lt;/u&gt;</target>
+			</trans-unit>
+			<trans-unit id="flexform.add_edit.url.0">
+				<source>flexform.add_edit.url.0</source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="preview.h5.2">
+				<source>preview.h5.2</source>
+				<target>Sie haben keine Buchungsseite ausgewählt.</target>
+			</trans-unit>
+			<trans-unit id="bookingtimepageurl.title">
+				<source>bookingtimepageurl.title</source>
+				<target>Bezeichnung</target>
+			</trans-unit>
+			<trans-unit id="bookingtimepageurl.url">
+				<source>bookingtimepageurl.url</source>
+				<target>URL</target>
+			</trans-unit>
+			<trans-unit id="actions">
+				<source>actions</source>
+				<target>Aktionen</target>
+			</trans-unit>
+			<trans-unit id="shortcode">
+				<source>shortcode</source>
+				<target>Shortcode:</target>
+			</trans-unit>
+
+			<trans-unit id="preview.header">
+				<source>preview.header</source>
+				<target>Vorschau</target>
+			</trans-unit>
+
+			<trans-unit id="link.back">
+				<source>link.back</source>
+				<target>Zurück</target>
+			</trans-unit>
+			<trans-unit id="link.cancel">
+				<source>link.cancel</source>
+				<target>Abbrechen</target>
+			</trans-unit>
+			<trans-unit id="link.discard">
+				<source>link.discard</source>
+				<target>Verwerfen</target>
+			</trans-unit>
+			<trans-unit id="link.delete">
+				<source>link.delete</source>
+				<target>Löschen</target>
+			</trans-unit>
+
+			<trans-unit id="modal.delete.header">
+				<source>modal.delete.header</source>
+				<target>Buchungsseite löschen</target>
+			</trans-unit>
+			<trans-unit id="modal.delete.body">
+				<source>modal.delete.body</source>
+				<target>Möchten Sie diese Buchungsseite wirklich aus Ihrer [CMS]-Installation löschen? Sie können es einfach wieder hinzufügen, wenn Sie Ihre Meinung ändern.</target>
+			</trans-unit>
+			<trans-unit id="modal.delete.cancel">
+				<source>modal.delete.cancel</source>
+				<target>Abbrechen</target>
+			</trans-unit>
+			<trans-unit id="modal.unsavedForm.header">
+				<source>modal.unsavedForm.header</source>
+				<target>Ungespeicherte Änderungen</target>
+			</trans-unit>
+			<trans-unit id="modal.unsavedForm.body">
+				<source>modal.unsavedForm.body</source>
+				<target>Möchten Sie diese Seite verlassen und alle nicht gespeicherten Änderungen verwerfen?</target>
+			</trans-unit>
+			<trans-unit id="modal.unsavedForm.submit">
+				<source>modal.unsavedForm.submit</source>
+				<target>Speichern</target>
+			</trans-unit>
+
+			<trans-unit id="list.header">
+				<source>list.header</source>
+				<target>Ihre Buchungsseiten</target>
+			</trans-unit>
+			<trans-unit id="list.actions.preview">
+				<source>list.actions.preview</source>
+				<target>Vorschau</target>
+			</trans-unit>
+			<trans-unit id="list.actions.edit">
+				<source>list.actions.edit</source>
+				<target>Bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="list.add">
+				<source>list.add</source>
+				<target>Buchungsseite hinzufügen</target>
+			</trans-unit>
+			<trans-unit id="list.add_first.header">
+				<source>list.add_first.header</source>
+				<target>Ihre erste Buchungsseite hinzufügen</target>
+			</trans-unit>
+			<trans-unit id="list.add_first.text">
+				<source>list.add_first.text</source>
+				<target>Sie haben keine Buchungsseiten zu Ihrer Wordpress-Installation hinzugefügt.</target>
+			</trans-unit>
+			<trans-unit id="list.add_first.button">
+				<source>list.add_first.button</source>
+				<target>Buchungsseite hinzufügen</target>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,14 @@
+##################
+### EXTENSIONS ###
+##################
+plugin.tx_appointment {
+    view {
+        layoutRootPath = EXT:bt_appointment/Resources/Private/Layouts/
+        partialRootPath = EXT:bt_appointment/Resources/Private/Partials/
+        templateRootPath = EXT:bt_appointment/Resources/Private/Templates/
+    }
+	settings {
+		# cat=appointment_main/file; type=int; label=Appointment PID
+		pid = 1
+	}
+}

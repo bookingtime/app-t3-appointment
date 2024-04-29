@@ -1,0 +1,121 @@
+body {
+   background-color: #eee;
+}
+
+
+.module-docheader {
+   display: none;;
+}
+
+.module-body {
+   padding: 0;
+}
+
+.header {
+   background-color: #fff;
+   box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+#step3 .box2,
+.fieldset1,
+#step1 .box1 {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-width: 0 !important;
+}
+
+#step3 .box3,
+.fieldset2,
+#step1 .box2 {
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-width: 2px !important;
+}
+
+.mod-tx_bookingtime_appointment select,
+.mod-tx_bookingtime_appointment input {
+   background-color: #F9FAFB;
+}
+
+.step > div,
+.form_step > fieldset {
+   width: 100%;
+   max-width:600px;
+   background-color: #fff;
+}
+
+#preview .box,
+#documentation,
+.form_add fieldset,
+.form_edit fieldset,
+.form_settings fieldset#settings {
+   background-color: #fff;
+}
+
+#step3 i.text-success {
+   font-size: 5em;
+}
+
+/*documentation*/
+#documentation .card {
+   max-width: 100%;
+}
+
+/*Flashmessages*/
+.appointment-messages .alert-success {
+   background-color: #D1E7DD;
+}
+.appointment-messages .alert-error {
+   background-color: #F8D7DA;
+}
+.appointment-messages .alert-info {
+   background-color: #CFF4FC;
+}
+.appointment-messages .alert-notice {
+   background-color: #CFE2FF;
+}
+
+/*forms*/
+.mod-tx_bookingtime_appointment input[type="checkbox"]:checked::before,
+.mod-tx_bookingtime_appointment input[type="radio"]:checked::before {
+   content: none !important;
+}
+
+.wp-core-ui .mod-tx_bookingtime_appointment select {
+   padding:.375rem 2.25rem .375rem .75rem !important;
+   max-width: 100% !important;
+   font-size: 1rem !important;
+}
+
+.mod-tx_bookingtime_appointment input[type="checkbox"] {
+   margin-top: 0.25em;
+}
+
+/*list*/
+#list .box {
+  background: #fff;
+  border-collapse: separate;
+}
+
+.add_action_link_top {
+   text-decoration: none;
+   color: #050F26BF;
+}
+
+#list .add_action_link_top:hover > i,
+#list .add_action_link:hover > i {
+   transform: scale(1.4) rotate(90deg);
+}
+
+#list .add_action_link_top i,
+#list .add_action_link i {
+   display: inline-block;
+   transition: 450ms;
+}
+
+
+/*modal*/
+.modal .modal-dialog {
+  transform: translateY(-50%) !important;
+  top: 25%;
+}

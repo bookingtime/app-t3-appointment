@@ -1,0 +1,33 @@
+{namespace core=TYPO3\CMS\Core\ViewHelpers}
+<f:layout name="BackendLayout" />
+
+<f:section name="Content">
+<f:render partial="Flashmessages.html" arguments="{_all}" />
+<div id="preview">
+   <div class="d-flex align-items-center m-3">
+      <f:link.action action="list" class="btn btn-light rounded-2 me-2"><i class="bi bi-arrow-left-short"></i> <f:translate key="{LLL.be}link.back" /></f:link.action>
+      <h4 class="m-0 fw-bold"><f:translate key="{LLL.be}preview.header" /></h4>
+   </div>
+
+<f:if condition="{bookingtimepageurl}">
+   <f:then>
+      <div class="box border border-3 rounded-3 m-3">
+         <div class="border-bottom">
+            <h5 class="p-3 m-0">{bookingtimepageurl.title}</h5>
+         </div>
+         <div class="ratio ratio-16x9 my-3">
+            <iframe src="{bookingtimepageurl.url}" title="{bookingtimepageurl.title}" class="embed-responsive-item iframe_{bookingtimepageurl.id}" allowfullscreen></iframe>
+         </div>
+         <div class="border-top">
+            <p class="p-3 m-0"></p>
+         </div>
+      </div>
+   </f:then>
+   <f:else>
+      <div class="box border border-3 rounded-3 p-3 m-3">
+         <h5 class="text-center text-danger"><f:translate key="{LLL.be}preview.h5.2" /></h5>
+      </div>
+   </f:else>
+</f:if>
+</div>
+</f:section>

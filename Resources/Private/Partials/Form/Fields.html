@@ -1,0 +1,25 @@
+<fieldset class="fieldset1 border border-3 rounded-3 p-3 mt-3" id="add">
+   <em class="mb-3 d-block"><f:translate key="{LLL.be}required.info" /></em>
+   <div class="mb-3">
+      <label for="title" class="form-label col-12"><f:translate key="{LLL.be}add_edit.form.title.label" /></label>
+      <f:form.textfield
+         type="text"
+         property="title"
+         required="true"
+         placeholder="{f:translate(key: '{LLL.be}add_edit.form.title.placeholder')}"
+         class="rounded-2 p-2 w-100"
+         id="title" />
+      <label for="title" class="form-label col-12 text-muted"><f:translate key="{LLL.be}add_edit.form.title.label.bottom" /></label>
+   </div>
+   <div class="mb-3">
+      <label for="url" class="form-label col-12"><f:translate key="{LLL.be}add_edit.form.url.label" /></label>
+      <f:form.textfield
+         type="url"
+         property="url"
+         required="true"
+         placeholder="{f:translate(key: '{LLL.be}add_edit.form.url.placeholder')}"
+         class="rounded-2 p-2 w-100"
+         id="url" />
+      <label for="url" class="form-label col-12 text-muted"><f:translate key="{LLL.be}add_edit.form.url.label.bottom" /></label>
+   </div>
+</fieldset>

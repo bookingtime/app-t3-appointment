@@ -1,0 +1,58 @@
+{
+    "name": "bookingtime/appointment",
+    "type": "typo3-cms-extension",
+    "description": "Conveniently integrate bookingtime's online appointment booking into your website.",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "bookingtime/lib-phpsdk-app": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "bookingtime GmbH",
+            "role": "Developer",
+            "email": "support@bookingtime.com",
+            "homepage": "https://www.bookingtime.com/"
+        }
+    ],
+    "keywords": [
+        "typo3",
+        "backend",
+        "extension",
+        "content",
+        "responsive",
+        "bootstrap",
+        "Api",
+        "appointment",
+        "calendar",
+        "event",
+        "Extbase",
+        "Fluid",
+        "Frontend",
+        "booking",
+        "bookingtime",
+        "date",
+        "ics",
+        "reservation",
+        "scheduling",
+        "cms",
+        "week",
+        "TYPO3 CMS"
+    ],
+    "support": {
+        "issues": "https://www.bookingtime.com/"
+    },
+    "config": {
+        "vendor-dir": "./vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bookingtime\\Appointment\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "bt_appointment"
+        }
+    }
+}

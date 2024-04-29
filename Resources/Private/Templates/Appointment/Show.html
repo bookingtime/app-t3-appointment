@@ -1,0 +1,11 @@
+{namespace core=TYPO3\CMS\Core\ViewHelpers}
+<f:layout name="DefaultLayout" />
+
+<f:section name="Content">
+<f:render partial="Flashmessages.html" arguments="{_all}" />
+<f:if condition="{bookingtimeurl}">
+<div class="embed-responsive embed-responsive-16by9">
+   <iframe name="{bookingtimeurl.title}" class="embed-responsive-item" src="{bookingtimeurl.url}" allowfullscreen></iframe>
+</div>
+</f:if>
+</f:section>

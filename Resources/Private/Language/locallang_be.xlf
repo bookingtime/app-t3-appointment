@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:bt_appointment/Resources/Private/Language/locallang_be.xlf" date="2022-10-05T16:00:00Z" product-name="appointment">
+        <header>
+            <authorName>bookingtime gmbh</authorName>
+            <authorEmail>cms-ext@bookingtime.com</authorEmail>
+        </header>
+        <body>
+			<trans-unit id="header.link.external.2">
+				<source>Go to bookingtime</source>
+			</trans-unit>
+
+			<trans-unit id="required.info">
+				<source>All fields are required.</source>
+			</trans-unit>
+			<trans-unit id="step1.h4.1">
+				<source>Create a new bookingtime account</source>
+			</trans-unit>
+			<trans-unit id="step1.h4.2">
+				<source>Already have an account?</source>
+			</trans-unit>
+			<trans-unit id="step1.p.1">
+				<source>Integrate bookingtime in your Wordpress installation. It’s easy and fast.</source>
+			</trans-unit>
+			<trans-unit id="step1.link.action.step2">
+				<source>Create New Account</source>
+			</trans-unit>
+			<trans-unit id="step1.link.action.list">
+				<source>Connect Your bookingtimepage</source>
+			</trans-unit>
+			<trans-unit id="step2.h4.1">
+				<source>Create a new bookingtime account</source>
+			</trans-unit>
+			<trans-unit id="step2.form.email.label">
+				<source>Your email address</source>
+			</trans-unit>
+			<trans-unit id="step2.form.email.placeholder">
+				<source>e. g. example@company.com</source>
+			</trans-unit>
+			<trans-unit id="step2.form.firstname.label">
+				<source>First name</source>
+			</trans-unit>
+			<trans-unit id="step2.form.firstname.placeholder">
+				<source>John</source>
+			</trans-unit>
+			<trans-unit id="step2.form.lastname.label">
+				<source>Last name</source>
+			</trans-unit>
+			<trans-unit id="step2.form.lastname.placeholder">
+				<source>Doe</source>
+			</trans-unit>
+			<trans-unit id="step2.form.company.label">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="step2.form.company.placeholder">
+				<source>Name of your company</source>
+			</trans-unit>
+			<trans-unit id="step2.form.checkbox.terms">
+				<source>I hereby order the free basic service and accept the underlying &lt;a target="_blank" href="%s"&gt;Terms and conditions&lt;/a&gt;.</source>
+			</trans-unit>
+			<trans-unit id="step2.form.checkbox.dsgvo">
+				<source>I hereby commission the contract for &lt;a target="_blank" href="%s"&gt;data processing&lt;/a&gt;, so that I fulfill my obligation according to DSGVO.</source>
+			</trans-unit>
+			<trans-unit id="step2.form.button.submit">
+				<source>Create Account</source>
+			</trans-unit>
+			<trans-unit id="step2.link.action.step1">
+				<source>Back</source>
+			</trans-unit>
+			<trans-unit id="step2.form.address.name.label">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="step2.form.address.name.placeholder">
+				<source>John Doe</source>
+			</trans-unit>
+			<trans-unit id="step2.form.address.street.label">
+				<source>Street name and number</source>
+			</trans-unit>
+			<trans-unit id="step2.form.address.street.placeholder">
+				<source>Musterstasse 1</source>
+			</trans-unit>
+
+			<trans-unit id="step2.form.address.zip.label">
+				<source>ZIP code</source>
+			</trans-unit>
+			<trans-unit id="step2.form.address.zip.placeholder">
+				<source>12345</source>
+			</trans-unit>
+			<trans-unit id="step2.form.address.city.label">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="step2.form.address.city.placeholder">
+				<source>Musterstadt</source>
+			</trans-unit>
+			<trans-unit id="step2.form.address.country.label">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="step2.form.sector.prependOptionLabel">
+				<source>Please Select</source>
+			</trans-unit>
+
+			<trans-unit id="add.header">
+				<source>Add Bookingpage</source>
+			</trans-unit>
+			<trans-unit id="edit.header">
+				<source>Bookingpage Details</source>
+			</trans-unit>
+			<trans-unit id="add_edit.form.url.placeholder">
+				<source>e. g. https://module.bookingtime.com/booking/...</source>
+			</trans-unit>
+			<trans-unit id="add_edit.form.url.label.bottom">
+				<source>You can find the URL in the booking module add in your bookingtime store.</source>
+			</trans-unit>
+			<trans-unit id="add_edit.form.title.placeholder">
+				<source>Your bookingtime bookingpage title</source>
+			</trans-unit>
+			<trans-unit id="add_edit.form.title.label">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="add_edit.form.title.label.bottom">
+				<source>The name ist not visible to your customers.</source>
+			</trans-unit>
+			<trans-unit id="add_edit.form.url.label">
+				<source>bookingtimepage URL</source>
+			</trans-unit>
+			<trans-unit id="add_edit.h5.1">
+				<source>You have not yet saved a bookingtimepage URL.</source>
+			</trans-unit>
+			<trans-unit id="add_edit.form.button.submit">
+				<source>Confirm</source>
+			</trans-unit>
+			<trans-unit id="add_edit.form.button.cancel">
+				<source>Cancel</source>
+			</trans-unit>
+
+			<trans-unit id="documentation.h5.1">
+				<source>How to find your bookingtimepage URL</source>
+			</trans-unit>
+			<trans-unit id="documentation.step.1">
+				<source>Step 1:</source>
+			</trans-unit>
+			<trans-unit id="documentation.step.1.text">
+				<source>Log into your bookingtime account and navigate to “Store” and then “Booking Module”.</source>
+			</trans-unit>
+			<trans-unit id="documentation.step.2">
+				<source>Step 2:</source>
+			</trans-unit>
+			<trans-unit id="documentation.step.2.text">
+				<source>Choose “add” in the top right. In the now open side bar you will find “Link to the module”. This is your bookingtimepage URL.</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.delete.title">
+				<source>DELETE bookingtimepage URL: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.delete.body">
+				<source>You have succesfully deleted: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+
+			<trans-unit id="flashmessage.delete.title.error">
+				<source>DELETE bookingtimepage URL failed!</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.delete.body.error">
+				<source>You have not succesfully deleted your bookingpageurl.</source>
+			</trans-unit>
+
+			<trans-unit id="flashmessage.create.title">
+				<source>CREATE new bookingtimepage URL: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.create.body">
+				<source>You have succesfully created: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+
+			<trans-unit id="flashmessage.update.title">
+				<source>UPDATE new bookingtimepage URL: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.update.body">
+				<source>You have succesfully updated: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+
+			<trans-unit id="flashmessage.add_edit.body">
+				<source>Save bookingtimepage URL: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.add_edit.title">
+				<source>You have succesfully saved: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+
+
+
+			<trans-unit id="flashmessage.step1.body">
+				<source>You used this email: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.step1.title">
+				<source>Step 1 succesfully finished</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.validateUrl.body">
+				<source>The URL is not valid.</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.validateUrl.title">
+				<source>URL validation failed!</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.validateTitle.body">
+				<source>The name can`t be empty.</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.validateTitle.title">
+				<source>Name validation failed!</source>
+			</trans-unit>
+
+
+			<trans-unit id="step3.h3.1">
+				<source>Your bookingtime is ready!</source>
+			</trans-unit>
+			<trans-unit id="step3.h5.1">
+				<source>Preview your bookingpage</source>
+			</trans-unit>
+			<trans-unit id="step3.h5.2">
+				<source>Activate your appointment booking</source>
+			</trans-unit>
+			<trans-unit id="step3.p.1">
+				<source>After you successfully activated your bookingtime account, have a look at your shiny new &lt;a href="%s"&gt;bookingtimepage&lt;/a&gt;.</source>
+			</trans-unit>
+			<trans-unit id="step3.p.2">
+				<source>We have sent you a &lt;b&gt;confirmation email&lt;/b&gt; to &lt;u&gt;%s&lt;/u&gt;. Please check your inbox to continue and activate your appointment booking.</source>
+			</trans-unit>
+			<trans-unit id="step3.p.3">
+				<source>Can’t find your confirmation email? Check your spam folder.</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.body">
+				<source>Your bookingtime is ready!</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.title">
+				<source>Step 2 succesfully finished</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.body.error">
+				<source>Your bookingtime is not ready!</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.title.error">
+				<source>Step 2 not succesfully finished</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.error.contractAccount.body">
+				<source>Response Message: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.error.contractAccount.title">
+				<source>Creating contractAccount failed errorCode: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.error.organization.body">
+				<source>Response Message: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+			<trans-unit id="flashmessage.step2.error.organization.title">
+				<source>Creating organization failed errorCode: &lt;u&gt;%s&lt;/u&gt;</source>
+			</trans-unit>
+			<trans-unit id="flexform.add_edit.url.0">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="preview.h5.2">
+				<source>You don't have selected a bookingpage.</source>
+			</trans-unit>
+			<trans-unit id="bookingtimepageurl.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="bookingtimepageurl.url">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="actions">
+				<source>Actions</source>
+			</trans-unit>
+			<trans-unit id="shortcode">
+				<source>Shortcode:</source>
+			</trans-unit>
+
+			<trans-unit id="preview.header">
+				<source>Preview</source>
+			</trans-unit>
+
+			<trans-unit id="link.back">
+				<source>Back</source>
+			</trans-unit>
+			<trans-unit id="link.cancel">
+				<source>Cancel</source>
+			</trans-unit>
+			<trans-unit id="link.discard">
+				<source>Discard</source>
+			</trans-unit>
+			<trans-unit id="link.delete">
+				<source>Delete</source>
+			</trans-unit>
+
+			<trans-unit id="modal.delete.header">
+				<source>Delete bookingpage</source>
+			</trans-unit>
+			<trans-unit id="modal.delete.body">
+				<source>Are you sure you want to delete this bookingpage from your [CMS] installation? You can simply add it back if you change your mind.</source>
+			</trans-unit>
+			<trans-unit id="modal.delete.cancel">
+				<source>Cancel</source>
+			</trans-unit>
+			<trans-unit id="modal.unsavedForm.header">
+				<source>You have unsaved changes</source>
+			</trans-unit>
+			<trans-unit id="modal.unsavedForm.body">
+				<source>Do you want to leave this page and discard all unsaved changes?</source>
+			</trans-unit>
+			<trans-unit id="modal.unsavedForm.submit">
+				<source>Save</source>
+			</trans-unit>
+
+			<trans-unit id="list.header">
+				<source>Your Bookingpages</source>
+			</trans-unit>
+			<trans-unit id="list.actions.preview">
+				<source>Preview</source>
+			</trans-unit>
+			<trans-unit id="list.actions.edit">
+				<source>Edit</source>
+			</trans-unit>
+			<trans-unit id="list.add">
+				<source>Add Bookingpage</source>
+			</trans-unit>
+			<trans-unit id="list.add_first">
+				<source>Add your first Bookingpage</source>
+			</trans-unit>
+
+			<trans-unit id="list.add_first.header">
+				<source>Add your first bookingpage</source>
+			</trans-unit>
+			<trans-unit id="list.add_first.text">
+				<source>You have not added any bookingpages to your WordPress installation.</source>
+			</trans-unit>
+			<trans-unit id="list.add_first.button">
+				<source>Add bookingpage</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,25 @@
+{namespace core=TYPO3\CMS\Core\ViewHelpers}
+<f:layout name="BackendLayout" />
+
+<f:section name="Content">
+<f:render partial="Flashmessages.html" arguments="{_all}" />
+<div id="add">
+   <div class="d-flex align-items-center m-3">
+      <f:link.action action="list" class="backButton btn btn-light rounded-2 me-2"><i class="bi bi-arrow-left-short"></i> <f:translate key="{LLL.be}link.back" /></f:link.action>
+      <h4 class="m-0 fw-bold"><f:translate key="{LLL.be}add.header" /></h4>
+   </div>
+   <f:form action="create" class="form form_add m-3" id="form_add" name="bookingtimepageurl" object="{bookingtimepageurl}">
+   <f:render partial="Form/Fields" arguments="{_all}" />
+   <fieldset class="fieldset2 border border-3 rounded-3 p-3 mt-0">
+      <div class="d-flex justify-content-end">
+         <f:link.action action="list" class="btn btn-light rounded-2 me-2"><f:translate key="{LLL.be}link.cancel" /></f:link.action>
+         <button class="btn btn-primary rounded-2" type="submit" name="" value="">
+            <f:translate key="{LLL.be}add_edit.form.button.submit" />
+         </button>
+      </div>
+   </fieldset>
+   <f:render section="modalUnsavedForm" partial="Macros" arguments="{_all}" />
+   </f:form>
+</div>
+<f:render partial="Documentation" arguments="{_all}" />
+</f:section>

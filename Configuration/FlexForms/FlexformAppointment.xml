@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:bt_appointment/Resources/Private/Language/locallang_db.xlf:flexform.appointment.title</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+						<settings.url>
+							<TCEforms>
+								<label>LLL:EXT:bt_appointment/Resources/Private/Language/locallang_db.xlf:flexform.appointment.url</label>
+								<config>
+									<type>select</type>
+									<renderType>selectSingle</renderType>
+									<foreign_table>tx_appointment_domain_model_bookingtimepageurl</foreign_table>
+									<foreign_table_where>ORDER BY uid</foreign_table_where>
+                                    <items>
+                                        <numIndex index="0">
+                                            <numIndex index="0">
+                                                LLL:EXT:bt_appointment/Resources/Private/Language/locallang_be.xlf:flexform.settings.url.0
+                                            </numIndex>
+                                            <numIndex index="1">0</numIndex>
+                                        </numIndex>
+                                    </items>
+									<minitems>0</minitems>
+									<maxitems>1</maxitems>
+								</config>
+							</TCEforms>
+						</settings.url>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

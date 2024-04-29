@@ -1,0 +1,16 @@
+{namespace core=TYPO3\CMS\Core\ViewHelpers}
+<f:layout name="BackendLayout" />
+<f:section name="Content">
+<f:render partial="Flashmessages.html" arguments="{_all}" />
+<div class="step" id="step1">
+   <div class="box1 border border-3 rounded-3 p-3 mt-5 mx-auto text-center">
+      <h4 class="m-3 fw-bold"><f:translate key="{LLL.be}step1.h4.1" /></h4>
+      <p class="m-3"><f:translate key="{LLL.be}step1.p.1" /></p>
+      <p class="m-3"><f:link.action action="step2" class="btn btn-primary rounded-2"><f:translate key="{LLL.be}step1.link.action.step2" /></f:link.action></p>
+  </div>
+   <div class="box2 border border-3 rounded-3 p-3 mt-0 mx-auto text-center">
+      <h4 class="m-3 fw-bold"><f:translate key="{LLL.be}step1.h4.2" /></h4>
+      <p class="m-3"><f:link.action action="list" class="btn btn-outline-primary rounded-2"><f:translate key="{LLL.be}step1.link.action.list" /></f:link.action></p>
+  </div>
+</div>
+</f:section>

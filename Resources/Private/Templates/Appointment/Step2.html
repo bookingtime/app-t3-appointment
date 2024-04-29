@@ -1,0 +1,113 @@
+{namespace core=TYPO3\CMS\Core\ViewHelpers}
+<f:layout name="BackendLayout" />
+
+<f:section name="Content">
+<f:render partial="Flashmessages.html" arguments="{_all}" />
+<div class="step" id="step2">
+<f:form id="form_step2" class="form form_step" action="step2" name="step2">
+  <fieldset class="fieldset1 border border-3 rounded-3 p-3 mt-5 mx-auto">
+   <h4 class="mt-3 my-1 fw-bold"><f:translate key="{LLL.be}step1.h4.1" /></h4>
+   <em class="mb-3 d-block"><f:translate key="{LLL.be}required.info" /></em>
+   <div class="row">
+      <div class="mb-3 col-12">
+         <label for="email" class="form-label col-12"><f:translate key="{LLL.be}step2.form.email.label" /></label>
+         <f:form.textfield name="email" id="email" class="rounded-2 col-12 p-2" required="true" type="email" placeholder="{f:translate(key: '{LLL.be}step2.form.email.placeholder')}" />
+      </div>
+      <div class="mb-3 col-6">
+         <label for="firstname" class="form-label col-12"><f:translate key="{LLL.be}step2.form.firstname.label" /></label>
+         <f:form.textfield name="firstname" id="firstname" class="rounded-2 col-12 p-2" required="true" type="text" placeholder="{f:translate(key: '{LLL.be}step2.form.firstname.placeholder')}" />
+      </div>
+      <div class="mb-3 col-6">
+         <label for="lastname" class="form-label col-12"><f:translate key="{LLL.be}step2.form.lastname.label" /></label>
+         <f:form.textfield name="lastname" id="lastname" class="rounded-2 col-12 p-2" required="true" type="text" placeholder="{f:translate(key: '{LLL.be}step2.form.lastname.placeholder')}" />
+      </div>
+      <div class="mb-3 col-12">
+         <label for="company" class="form-label col-12"><f:translate key="{LLL.be}step2.form.company.label" /></label>
+         <f:form.textfield name="company" id="company" class="rounded-2 col-12 p-2" required="true" type="text" placeholder="{f:translate(key: '{LLL.be}step2.form.company.placeholder')}" />
+      </div>
+      <div class="mb-3 col-12">
+         <label for="address[street]" class="form-label col-12"><f:translate key="{LLL.be}step2.form.address.street.label" /></label>
+         <f:form.textfield
+            name="address[street]"
+            id="address[street]"
+            class="rounded-2 col-12 p-2"
+            required="true"
+            type="text"
+            placeholder="{f:translate(key: '{LLL.be}step2.form.address.street.placeholder')}"
+            value="{f:translate(key: '{LLL.be}step2.form.address.street.placeholder')}" />
+      </div>
+      <div class="mb-3 col-6">
+         <label for="address[zip]" class="form-label col-12"><f:translate key="{LLL.be}step2.form.address.zip.label" /></label>
+         <f:form.textfield
+            name="address[zip]"
+            id="address[zip]"
+            class="rounded-2 col-12 p-2"
+            required="true"
+            type="text"
+            placeholder="{f:translate(key: '{LLL.be}step2.form.address.zip.placeholder')}"
+            value="{f:translate(key: '{LLL.be}step2.form.address.zip.placeholder')}" />
+      </div>
+      <div class="mb-3 col-6">
+         <label for="address[city]" class="form-label col-12"><f:translate key="{LLL.be}step2.form.address.city.label" /></label>
+         <f:form.textfield
+            name="address[city]"
+            id="address[city]"
+            class="rounded-2 col-12 p-2"
+            required="true"
+            type="text"
+            placeholder="{f:translate(key: '{LLL.be}step2.form.address.city.placeholder')}"
+            value="{f:translate(key: '{LLL.be}step2.form.address.city.placeholder')}" />
+      </div>
+      <div class="mb-3 col-12">
+         <label for="address[country]" class="form-label col-12"><f:translate key="{LLL.be}step2.form.address.country.label" /></label>
+         <f:form.select
+            name="address[country]"
+            options="{countries}"
+            optionValueField="code"
+            optionLabelField="name"
+            required="true"
+            value="DE"
+            class="form-select" />
+      </div>
+   </div>
+
+   <f:if condition="{lang} == 'de'">
+      <f:then>
+         <f:variable name="terms" value="https://service.bookingtime.com/legal/de/agb/bookingtime_AGB.pdf" />
+         <f:variable name="dsgvo" value="https://service.bookingtime.com/legal/de/datenschutz/bookingtime_Datenschutzbestimmungen.pdf" />
+      </f:then>
+      <f:else>
+         <f:variable name="terms" value="https://service.bookingtime.com/legal/en/terms/bookingtime_Terms_and_Conditions.pdf" />
+         <f:variable name="dsgvo" value="https://service.bookingtime.com/legal/en/privacy/bookingtime_Privacy_Policy.pdf" />
+      </f:else>
+   </f:if>
+
+   <div class="mb-3 col-12 form-check">
+      <f:form.checkbox additionalAttributes="{required:'required'}" name="terms" id="terms" class="form-check-input" value="1" />
+         <label for="terms" class="form-check-label d-inline">
+         <f:format.raw><f:translate key="htmlKey" id="{LLL.be}step2.form.checkbox.terms" arguments="{0:terms}" /></f:format.raw>
+      </label>
+   </div>
+   <div class="mb-3 col-12 form-check">
+      <f:form.checkbox additionalAttributes="{required:'required'}" name="dsgvo" id="dsgvo" class="form-check-input" value="1" />
+      <label for="dsgvo" class="form-check-label d-inline">
+         <f:format.raw><f:translate key="htmlKey" id="{LLL.be}step2.form.checkbox.dsgvo" arguments="{0:dsgvo}" /></f:format.raw>
+      </label>
+   </div>
+  </fieldset>
+  <fieldset class="fieldset2 border border-3 rounded-3 p-3 mt-0 mx-auto" id="step2bottom">
+   <div class="container text-center m-0 p-0">
+      <div class="row m-0 p-0">
+         <div class="col d-flex justify-content-start m-0 p-0">
+            <f:link.action action="step1" class="backButton btn btn-light rounded-2"><i class="bi bi-arrow-left-short"></i> <f:translate key="{LLL.be}step2.link.action.step1" /></f:link.action>
+         </div>
+         <div class="col d-flex justify-content-end m-0 p-0">
+            <f:form.button type="submit" class="btn btn-primary rounded-2"><f:translate key="{LLL.be}step2.form.button.submit" /></f:form.button>
+         </div>
+      </div>
+   </div>
+  </fieldset>
+  <f:render section="modalUnsavedForm" partial="Macros" arguments="{_all}" />
+</f:form>
+</div>
+</f:section>
