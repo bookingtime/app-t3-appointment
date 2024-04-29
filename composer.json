@@ -1,5 +1,5 @@
 {
-    "name": "bookingtime/appointment",
+    "name": "bookingtime/module-t3-appointment",
     "type": "typo3-cms-extension",
     "description": "Conveniently integrate bookingtime's online appointment booking into your website.",
     "license": "MIT",
