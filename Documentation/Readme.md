@@ -20,7 +20,6 @@ bookingtime appointment is a powerful appointment extension based on the booking
 * [Additional links](/Documentation/Links/Readme.md)
 
 
-
 ---
 Copyright 2014 bookingtime GmbH. All Rights Reserved.
 

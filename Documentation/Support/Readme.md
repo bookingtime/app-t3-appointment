@@ -20,7 +20,6 @@
 * Individual access permissions
 * Resource optimisation
 
-
 ---
 Copyright 2014 bookingtime GmbH. All Rights Reserved.
 

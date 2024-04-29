@@ -5,6 +5,7 @@ use Bookingtime\Appointment\Domain\Model\Bookingtimepageurl;
 use Bookingtime\Appointment\Domain\Repository\BookingtimepageurlRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
+use TYPO3\CMS\Core\Context\Context;
 use TYPO3\CMS\Core\Messaging\AbstractMessage;
 class BookingtimeService
 {
@@ -225,7 +226,7 @@ class BookingtimeService
       return 'de_DE.UTF-8';
 	}
 
-	/**
+   /**
 	 * getOrganizationTemplateLanguage()
 	 * @return string
 	 */

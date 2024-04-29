@@ -18,8 +18,6 @@ use \bookingtime\phpsdkapp\Sdk\Exception\RequestException;
 use TYPO3\CMS\Core\Imaging\IconFactory;
 
 
-use TYPO3\CMS\Core\Imaging\Icon;
-
 final class AppointmentController extends ActionController
 {
 
@@ -80,6 +78,7 @@ final class AppointmentController extends ActionController
 		];
       $this->sdk = new Sdk($clientId,$clientSecret,$configArray);
 
+
       //get static sector list
       $this->sectorList = $this->sdk->static_sector_list([]);
 
@@ -92,11 +91,6 @@ final class AppointmentController extends ActionController
       $this->partialRootPaths = ['EXT:bt_appointment/Resources/Private/Partials'];
 
   }
-
-
-   public function initializeAction() {
-
-   }
 
    /**
     * Displays the index Template
@@ -126,6 +120,7 @@ final class AppointmentController extends ActionController
       $this->view->assignMultiple([
          'LLL' => $this->LLL,
       ]);
+
 
       $this->moduleTemplate = $this->moduleTemplateFactory->create($this->request);
       $this->moduleTemplate->setContent($this->view->render());

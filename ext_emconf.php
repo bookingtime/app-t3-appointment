@@ -9,7 +9,7 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'templates',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.0.0-11.5.99'
+            'typo3' => '12.0.0-12.5.99'
         ],
         'conflicts' => [
         ],
@@ -29,5 +29,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'bookingtime',
     'author_email' => 'cms-ext@bookingtime.com',
     'author_company' => 'bookingtime GmbH',
-    'version' => '11.0.0',
+    'version' => '12.0.0',
 ];
