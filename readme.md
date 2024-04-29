@@ -1,7 +1,7 @@
 # module-t3-appointment
 TYPO3 extension appointment, booking module wrapper for CMS TYPO3 with included setup process.
 
-<img src="https://github.com/bookingtime/module-t3-appointment/blob/master/aws/logo_typo3.png" alt="logo typo3" width="200" />
+<img src="https://github.com/bookingtime/module-t3-appointment/blob/master/aws/logo_typo3.svg" alt="logo typo3" width="200" />
 
 
 
