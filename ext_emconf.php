@@ -29,5 +29,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'bookingtime',
     'author_email' => 'cms-ext@bookingtime.com',
     'author_company' => 'bookingtime GmbH',
-    'version' => '12.0.2',
+    'version' => '12.0.3',
 ];
