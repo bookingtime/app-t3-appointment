@@ -1,7 +1,7 @@
-# module-t3-appointment
+# app-t3-appointment
 TYPO3 extension appointment, booking module wrapper for CMS TYPO3 with included setup process.
 
-<img src="https://github.com/bookingtime/module-t3-appointment/blob/master/aws/logo_typo3.svg" alt="logo typo3" width="200" />
+<img src="https://github.com/bookingtime/app-t3-appointment/blob/master/aws/logo_typo3.svg" alt="logo typo3" width="200" />
 
 
 
@@ -19,9 +19,9 @@ TYPO3 extension appointment, booking module wrapper for CMS TYPO3 with included 
 
 Another way to install the extension is through Composer.
 ```bash
-composer require bookingtime/module-t3-appointment
+composer require bookingtime/app-t3-appointment
 ```
-see: https://packagist.org/packages/bookingtime/module-t3-appointment
+see: https://packagist.org/packages/bookingtime/app-t3-appointment
 
 
 
@@ -47,4 +47,4 @@ Copyright 2014 bookingtime GmbH. All Rights Reserved.
 
 Made with :blue_heart: by © bookingtime
 
-<img src="https://github.com/bookingtime/module-t3-appointment/blob/master/aws/logo_bookingtime.png" alt="logo" width="30" height="44" />
+<img src="https://github.com/bookingtime/app-t3-appointment/blob/master/aws/logo_bookingtime.png" alt="logo" width="30" height="44" />
