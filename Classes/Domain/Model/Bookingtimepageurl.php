@@ -19,13 +19,6 @@ class Bookingtimepageurl extends AbstractEntity
    protected $url;
 
    /**
-    * cruserId
-    * @var int
-    */
-   protected $cruserId;
-
-
-   /**
     * Get title
     *
     * @return  string
@@ -61,21 +54,5 @@ class Bookingtimepageurl extends AbstractEntity
     */
    public function setUrl(string $url):void {
       $this->url = $url;
-   }
-
-   /**
-    * Get the value of cruser_id
-    */
-   public function getCruserId() {
-      return $this->cruserId;
-   }
-
-   /**
-    * Set the value of cruser_id
-    *
-    * @param  integer  $url  url
-    */
-   public function setCruserId(int $cruserId):void {
-      $this->cruserId = $cruserId;
    }
 }

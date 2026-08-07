@@ -1,14 +1,11 @@
 #
 # Table structure for table 'tx_appointment_domain_model_bookingtimepageurl'
 #
+# Verwaltungsspalten (uid, pid, tstamp, crdate, deleted, hidden, starttime,
+# endtime, sorting, Sprach- und Workspace-Felder) erzeugt TYPO3 seit v12
+# automatisch aus dem TCA-ctrl.
+#
 CREATE TABLE tx_appointment_domain_model_bookingtimepageurl (
-	uid int(11) unsigned NOT NULL auto_increment,
-	pid int(11) unsigned DEFAULT '0' NOT NULL,
-	crdate int(11) unsigned DEFAULT '0' NOT NULL,
-	disable tinyint(4) unsigned DEFAULT '0' NOT NULL,
-	deleted tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	title varchar(255) DEFAULT '' NOT NULL,
-   url text DEFAULT '' NOT NULL,
-
-	PRIMARY KEY (uid)
+	url text
 );

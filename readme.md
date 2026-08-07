@@ -6,8 +6,9 @@ TYPO3 extension appointment, booking module wrapper for CMS TYPO3 with included 
 
 
 ## Requirements
+- TYPO3 version 14: https://docs.typo3.org/m/typo3/tutorial-getting-started/main/en-us/SystemRequirements/Index.html
+- TYPO3 version 13: https://docs.typo3.org/m/typo3/tutorial-getting-started/13.4/en-us/SystemRequirements/Index.html
 - TYPO3 version 12: https://docs.typo3.org/m/typo3/tutorial-getting-started/12.4/en-us/SystemRequirements/Index.html
-- TYPO3 version 11: https://docs.typo3.org/m/typo3/tutorial-getting-started/11.5/en-us/SystemRequirements/Index.html
 
 
 

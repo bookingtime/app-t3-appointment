@@ -9,13 +9,11 @@ return [
         'label_alt_force' => true,
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
         'versioningWS' => true,
         'origUid' => 't3_origuid',
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
         'transOrigDiffSourceField' => 'l10n_diffsource',
-        'default_sortby' => 'ORDER BY uid ASC',
         'sortby' => 'sorting',
         'delete' => 'deleted',
         'enablecolumns' => [
@@ -25,10 +23,8 @@ return [
         ],
         'iconfile' => 'EXT:bt_appointment/Resources/Public/Icons/icon_bookingtimepageurl.png'
     ],
-    'interface' => [
-    ],
     'types' => [
-        '1' => ['showitem' => 'title,url,cruser_id'],
+        '1' => ['showitem' => 'title,url'],
     ],
     'columns' => [
         'title'=>[
@@ -45,11 +41,6 @@ return [
                 'placeholder' => 'https://module.bookingtime.com/booking/moduleConfig/5f8AaSVSFGrgSjv420Kbf69YRetxLIMj',
                 'eval' => 'trim,unique',
                 'size' => 100,
-            ],
-        ],
-        'cruser_id' => [
-            'config' => [
-                'type' => 'passthrough'
             ],
         ],
     ],
