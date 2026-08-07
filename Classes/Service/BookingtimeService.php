@@ -6,7 +6,8 @@ use Bookingtime\Appointment\Domain\Repository\BookingtimepageurlRepository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use TYPO3\CMS\Core\Context\Context;
-use TYPO3\CMS\Core\Messaging\AbstractMessage;
+use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
+use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 class BookingtimeService
 {
 
@@ -290,7 +291,7 @@ class BookingtimeService
 			return true;
 		} else {
 			//flashmessage
-         $appointmentController->addFlashMessage($appointmentController->translationService->translate($appointmentController->LLL['be'] . 'flashmessage.validateTitle.body'),$appointmentController->translationService->translate($appointmentController->LLL['be'] . 'flashmessage.validateTitle.title'),AbstractMessage::ERROR);
+         $appointmentController->addFlashMessage((string)LocalizationUtility::translate($appointmentController->LLL['be'] . 'flashmessage.validateTitle.body'),(string)LocalizationUtility::translate($appointmentController->LLL['be'] . 'flashmessage.validateTitle.title'),ContextualFeedbackSeverity::ERROR);
 			return false;
 		}
 	}
@@ -306,7 +307,7 @@ class BookingtimeService
 			return true;
 		} else {
 			//flashmessage
-         $appointmentController->addFlashMessage($appointmentController->translationService->translate($appointmentController->LLL['be'] . 'flashmessage.validateUrl.body'),$appointmentController->translationService->translate($appointmentController->LLL['be'] . 'flashmessage.validateUrl.title'),AbstractMessage::ERROR);
+         $appointmentController->addFlashMessage((string)LocalizationUtility::translate($appointmentController->LLL['be'] . 'flashmessage.validateUrl.body'),(string)LocalizationUtility::translate($appointmentController->LLL['be'] . 'flashmessage.validateUrl.title'),ContextualFeedbackSeverity::ERROR);
 			return false;
 		}
 	}
