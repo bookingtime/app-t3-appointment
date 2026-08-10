@@ -20,4 +20,14 @@ return [
         'width' => '200px',
         'height' => '80px',
     ],
+    // Modul-Icons: ab v12 referenziert Configuration/Backend/Modules.php die
+    // Bilddateien direkt, TYPO3 11 (ext_tables.php) braucht Icon-Identifier
+    'bookingtime-module-group' => [
+        'provider' => BitmapIconProvider::class,
+        'source' => 'EXT:bt_appointment/Resources/Public/Icons/bookingtime.png',
+    ],
+    'bookingtime-module-appointment' => [
+        'provider' => BitmapIconProvider::class,
+        'source' => 'EXT:bt_appointment/Resources/Public/Icons/appointment_icon.png',
+    ],
 ];

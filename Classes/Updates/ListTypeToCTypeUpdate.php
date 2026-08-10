@@ -23,6 +23,16 @@ final class ListTypeToCTypeUpdate implements UpgradeWizardInterface
 {
     private const LIST_TYPE = 'appointment_appointment';
 
+    /**
+     * Bis TYPO3 11 Bestandteil des UpgradeWizardInterface, ab 12 ersetzt
+     * durch das UpgradeWizard-Attribut - fuer 12/13 nur eine tote Methode,
+     * ohne sie fataled aber jeder v11-Request beim Laden der Klasse.
+     */
+    public function getIdentifier(): string
+    {
+        return 'btAppointmentListTypeToCType';
+    }
+
     public function getTitle(): string
     {
         return 'bookingtime appointment: Plugin von list_type zu CType migrieren';

@@ -86,6 +86,37 @@ final class AppointmentController extends ActionController
    }
 
    /**
+    * FlashMessage-Severity versionsuebergreifend: ab TYPO3 12 das Enum
+    * ContextualFeedbackSeverity, in v11 die Int-Konstanten der AbstractMessage
+    * (Konstantennamen OK/WARNING/ERROR sind identisch)
+    *
+    * @return ContextualFeedbackSeverity|int
+    */
+   private function severity(string $case) {
+      if (enum_exists(ContextualFeedbackSeverity::class)) {
+         return constant(ContextualFeedbackSeverity::class . '::' . $case);
+      }
+      return constant('TYPO3\\CMS\\Core\\Messaging\\AbstractMessage::' . $case);
+   }
+
+   /**
+    * Backend-Modul-Response versionsuebergreifend: ab TYPO3 12 ist das
+    * ModuleTemplate selbst die View (renderResponse), in v11 rendert die
+    * Extbase-View das Action-Template und das ModuleTemplate liefert nur
+    * den Rahmen (Docheader etc.)
+    */
+   private function moduleResponse(array $variables, string $templateName): ResponseInterface {
+      $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
+      if (method_exists($moduleTemplate, 'renderResponse')) {
+         $moduleTemplate->assignMultiple($variables);
+         return $moduleTemplate->renderResponse($templateName);
+      }
+      $this->view->assignMultiple($variables);
+      $moduleTemplate->setContent($this->view->render());
+      return $this->htmlResponse($moduleTemplate->renderContent());
+   }
+
+   /**
     * Displays the index Template
    *
    */
@@ -99,18 +130,16 @@ final class AppointmentController extends ActionController
       if($this->request->hasArgument('email')) {
          //validateEmailAddress
          if($this->bookingtimeService->validateEmailAddress($this->request->getArgument('email')) ) {
-            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step1.body',[0 => $this->request->getArgument('email')]),$this->translate($this->LLL['be'] . 'flashmessage.step1.title'),ContextualFeedbackSeverity::OK);
+            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step1.body',[0 => $this->request->getArgument('email')]),$this->translate($this->LLL['be'] . 'flashmessage.step1.title'),$this->severity('OK'));
             return $this->redirect('step2','Appointment', 'Appointment', ['email'=>$this->request->getArgument('email')]);
          } else {
-            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step1.validationFailed.body',[0 => $this->request->getArgument('email')]),$this->translate($this->LLL['be'] . 'flashmessage.step1.validationFailed.title'),ContextualFeedbackSeverity::WARNING);
+            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step1.validationFailed.body',[0 => $this->request->getArgument('email')]),$this->translate($this->LLL['be'] . 'flashmessage.step1.validationFailed.title'),$this->severity('WARNING'));
          }
       }
 
-      $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
-      $moduleTemplate->assignMultiple([
+      return $this->moduleResponse([
          'LLL' => $this->LLL,
-      ]);
-      return $moduleTemplate->renderResponse('Appointment/Step1');
+      ], 'Appointment/Step1');
    }
 
    /**
@@ -190,7 +219,7 @@ final class AppointmentController extends ActionController
          try {
             $contractAccount=$this->getSdk()->contractAccount_add([],$this->bookingtimeService->makeContractAccountDataArray($formData));
          } catch(RequestException $e) {
-            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step2.error.contractAccount.body',[0 => $e->getMessage()]),$this->translate($this->LLL['be'] . 'flashmessage.step2.error.contractAccount.title',[0 => $e->getCode()]),ContextualFeedbackSeverity::ERROR);
+            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step2.error.contractAccount.body',[0 => $e->getMessage()]),$this->translate($this->LLL['be'] . 'flashmessage.step2.error.contractAccount.title',[0 => $e->getCode()]),$this->severity('ERROR'));
             return $this->redirect('step2','Appointment', 'Appointment', ['email'=>$validatedData['email']]);
          }
 
@@ -199,32 +228,30 @@ final class AppointmentController extends ActionController
             $formData['contractAccount'] = $contractAccount;
             $organizantion = $this->getSdk()->organization_add([],$this->bookingtimeService->makeParentOrganizationDataArray($formData));
          } catch(RequestException $e) {
-            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step2.error.organization.body',[0 => $e->getMessage()]),$this->translate($this->LLL['be'] . 'flashmessage.step2.error.organization.title',[0 => $e->getCode()]),ContextualFeedbackSeverity::ERROR);
+            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step2.error.organization.body',[0 => $e->getMessage()]),$this->translate($this->LLL['be'] . 'flashmessage.step2.error.organization.title',[0 => $e->getCode()]),$this->severity('ERROR'));
             return $this->redirect('step2','Appointment', 'Appointment', ['email'=>$validatedData['email']]);
          }
 
          //write to db
          if($this->bookingtimeService->writeOrganizationResponseToDB($organizantion['recordList'])) {
             //redirect to step3
-            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step2.body',[0 => $this->request->getArgument('email')]),$this->translate($this->LLL['be'] . 'flashmessage.step2.title'),ContextualFeedbackSeverity::OK);
+            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step2.body',[0 => $this->request->getArgument('email')]),$this->translate($this->LLL['be'] . 'flashmessage.step2.title'),$this->severity('OK'));
             return $this->redirect('step3','Appointment', 'Appointment', ['data'=>$validatedData]);
          } else {
-            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step2.body',[0 => $this->request->getArgument('email')]),$this->translate($this->LLL['be'] . 'flashmessage.step2.title'),ContextualFeedbackSeverity::ERROR);
+            $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.step2.body',[0 => $this->request->getArgument('email')]),$this->translate($this->LLL['be'] . 'flashmessage.step2.title'),$this->severity('ERROR'));
          }
       }
 
       //get static country list
       $countryList = $this->getSdk()->static_country_list([]);
 
-      $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
-      $moduleTemplate->assignMultiple([
+      return $this->moduleResponse([
          'currentNavItem' => 'step2',
          'LLL' => $this->LLL,
          'action' => 'step1',
          'countries' => $countryList['recordList'],
          'lang' => $this->userLanguage
-      ]);
-      return $moduleTemplate->renderResponse('Appointment/Step2');
+      ], 'Appointment/Step2');
    }
 
    /**
@@ -238,13 +265,11 @@ final class AppointmentController extends ActionController
          $data = $this->request->getArgument('data');
       }
 
-      $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
-      $moduleTemplate->assignMultiple([
+      return $this->moduleResponse([
          'LLL' => $this->LLL,
          'data' => isset($data) ? $data : NULL,
          'bookingtimepageurl' =>  $bookingtimepageurl ? $bookingtimepageurl[0] : NULL
-      ]);
-      return $moduleTemplate->renderResponse('Appointment/Step3');
+      ], 'Appointment/Step3');
    }
 
    /**
@@ -256,12 +281,10 @@ final class AppointmentController extends ActionController
       //data from form
       $bookingtimepageurls = $this->bookingtimepageurlRepository->findAll();
 
-      $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
-      $moduleTemplate->assignMultiple([
+      return $this->moduleResponse([
          'LLL' => $this->LLL,
          'bookingtimepageurls' => $bookingtimepageurls
-      ]);
-      return $moduleTemplate->renderResponse('Appointment/List');
+      ], 'Appointment/List');
    }
 
    /**
@@ -270,11 +293,9 @@ final class AppointmentController extends ActionController
    */
    public function addAction(): ResponseInterface {
 
-      $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
-      $moduleTemplate->assignMultiple([
+      return $this->moduleResponse([
          'LLL' => $this->LLL
-      ]);
-      return $moduleTemplate->renderResponse('Appointment/Add');
+      ], 'Appointment/Add');
    }
 
 	/**
@@ -289,7 +310,7 @@ final class AppointmentController extends ActionController
       }
 
 		$this->bookingtimepageurlRepository->add($bookingtimepageurl);
-      $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.create.body',[0 => $bookingtimepageurl->getUrl()]),$this->translate($this->LLL['be'] . 'flashmessage.create.title',[0 => htmlentities($bookingtimepageurl->getTitle())]),ContextualFeedbackSeverity::OK);
+      $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.create.body',[0 => $bookingtimepageurl->getUrl()]),$this->translate($this->LLL['be'] . 'flashmessage.create.title',[0 => htmlentities($bookingtimepageurl->getTitle())]),$this->severity('OK'));
       $this->persistanceManager->persistAll();
 		return $this->redirect('list');
 
@@ -301,12 +322,10 @@ final class AppointmentController extends ActionController
 	 */
 	public function editAction(Bookingtimepageurl $bookingtimepageurl): ResponseInterface {
 
-      $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
-      $moduleTemplate->assignMultiple([
+      return $this->moduleResponse([
          'LLL' => $this->LLL,
          'bookingtimepageurl' => $bookingtimepageurl
-      ]);
-      return $moduleTemplate->renderResponse('Appointment/Edit');
+      ], 'Appointment/Edit');
 	}
 
 	/**
@@ -320,7 +339,7 @@ final class AppointmentController extends ActionController
       }
 
 		$this->bookingtimepageurlRepository->update($bookingtimepageurl);
-      $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.update.body',[0 => $bookingtimepageurl->getUrl()]),$this->translate($this->LLL['be'] . 'flashmessage.update.title',[0 => htmlentities($bookingtimepageurl->getTitle())]),ContextualFeedbackSeverity::OK);
+      $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.update.body',[0 => $bookingtimepageurl->getUrl()]),$this->translate($this->LLL['be'] . 'flashmessage.update.title',[0 => htmlentities($bookingtimepageurl->getTitle())]),$this->severity('OK'));
       $this->persistanceManager->persistAll();
 		return $this->redirect('list');
 	}
@@ -335,7 +354,7 @@ final class AppointmentController extends ActionController
          return $this->redirect('list','Appointment', 'Appointment');
       }
 		$this->bookingtimepageurlRepository->remove($bookingtimepageurl);
-      $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.delete.body',[0 => $bookingtimepageurl->getUrl()]),$this->translate($this->LLL['be'] . 'flashmessage.delete.title',[0 => htmlentities($bookingtimepageurl->getTitle())]),ContextualFeedbackSeverity::OK);
+      $this->addFlashMessage($this->translate($this->LLL['be'] . 'flashmessage.delete.body',[0 => $bookingtimepageurl->getUrl()]),$this->translate($this->LLL['be'] . 'flashmessage.delete.title',[0 => htmlentities($bookingtimepageurl->getTitle())]),$this->severity('OK'));
       $this->persistanceManager->persistAll();
 		return $this->redirect('list');
 	}
@@ -367,11 +386,9 @@ final class AppointmentController extends ActionController
    */
    public function previewAction(Bookingtimepageurl $bookingtimepageurl): ResponseInterface {
 
-      $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
-      $moduleTemplate->assignMultiple([
+      return $this->moduleResponse([
          'LLL' => $this->LLL,
          'bookingtimepageurl'=>$bookingtimepageurl
-      ]);
-      return $moduleTemplate->renderResponse('Appointment/Preview');
+      ], 'Appointment/Preview');
    }
 }
