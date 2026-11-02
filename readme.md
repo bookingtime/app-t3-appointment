@@ -1,47 +1,36 @@
 # app-t3-appointment
-TYPO3 extension appointment, booking module wrapper for CMS TYPO3 with included setup process.
+
+TYPO3 extension **bt_appointment** — embeds bookingtime's online appointment booking into your TYPO3 website, with an included setup process.
 
 <img src="https://github.com/bookingtime/app-t3-appointment/blob/master/aws/logo_typo3.svg" alt="logo typo3" width="200" />
 
-
-
 ## Requirements
-- TYPO3 version 14: https://docs.typo3.org/m/typo3/tutorial-getting-started/main/en-us/SystemRequirements/Index.html
-- TYPO3 version 13: https://docs.typo3.org/m/typo3/tutorial-getting-started/13.4/en-us/SystemRequirements/Index.html
-- TYPO3 version 12: https://docs.typo3.org/m/typo3/tutorial-getting-started/12.4/en-us/SystemRequirements/Index.html
-
-
+- TYPO3 11.5, 12.4, 13.4 or 14 (Composer mode or classic mode), PHP 8.1 or newer
+- System requirements: https://docs.typo3.org/m/typo3/tutorial-getting-started/main/en-us/SystemRequirements/Index.html
 
 ## How To Install
-1. Download, install and activate the bookingtime bt_appointment extension via extension manager.
-2. Include the static template file: Appointment (bt_appointment)
-3. Register and configure the settings at the bookingtime bt_appointment module.
-4. To insert the appointment form into a page as content use the frontend plugin appointment.
+1. Download, install and activate the bookingtime `bt_appointment` extension via the extension manager.
+2. Include the static template "Appointment (bt_appointment)".
+3. Register and configure the settings in the backend module "bookingtime appointments".
+4. Insert the appointment form into a page with the content element "appointment".
 
-Another way to install the extension is through Composer.
+Alternatively install via Composer:
 ```bash
 composer require bookingtime/app-t3-appointment
 ```
 see: https://packagist.org/packages/bookingtime/app-t3-appointment
 
-
-
 ## Help and docs
-- More [informarion](/Documentation/Readme.md) about this extension in the documentation directory.
+- Administrator documentation with screenshots: [Documentation](/Documentation/Readme.md)
+- Technical notes for contributors: [CLAUDE.md](/CLAUDE.md)
 - Support for developers: https://developer.bookingtime.com
-- See the full API documentation under https://service.bookingtime.com/apidoc/module
-
-
+- API documentation: https://service.bookingtime.com/apidoc/module
 
 ## Security
 If you discover a security vulnerability within this package, please send an email to support@bookingtime.com or create a [ticket](https://developer.bookingtime.com/hc/en-us/requests/new?ticket_form_id=9359661193628). All security vulnerabilities will be promptly addressed.
 
-
-
 ## License
 This extension is distributed under the MIT License, see LICENSE file for more information.
-
-
 
 ---
 Copyright 2014 bookingtime GmbH. All Rights Reserved.
